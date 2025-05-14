@@ -36,27 +36,27 @@ const Header = () => {
     {
       name: "Clipping path service",
       image:
-        "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
+        "https://fixthephoto.com/images/uikit_slider/photo-editing-services-after-wh960.jpg",
     },
     {
       name: "Gost Mannequin photo Editing Srvice",
       image:
-        "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
+        "https://fixthephoto.com/images/uikit_slider/photography-retouching-services-after-wh650.jpg",
     },
     {
       name: "Jewelry image editing service",
       image:
-        "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
+        "https://fixthephoto.com/images/uikit_slider/professional-photo-editing-services-after-wh650.jpg",
     },
     {
       name: "Newborn photo editing Service",
       image:
-        "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
+        "https://fixthephoto.com/images/uikit_slider/photoshop-services-online--after-wh650.jpg",
     },
     {
       name: "High-End Model photo Retouching service",
       image:
-        "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
+        "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-after-wh650.jpg",
     },
   ];
 
@@ -119,7 +119,7 @@ const Header = () => {
                         <Link
                           key={index}
                           to="/services"
-                          className="group flex flex-col items-center gap-2 rounded-lg border border-gray-200 bg-white p-3 text-center shadow-sm transition hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
+                          className="group flex flex-col items-center gap-2 rounded-lg border border-gray-200 bg-white p-2 text-center shadow-sm transition hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
                         >
                           <img
                             src={service.image}
