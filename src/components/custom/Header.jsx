@@ -195,24 +195,26 @@ const Header = () => {
                         </button>
                       </div>
                       {isMobileDropdownOpen && (
-                       <div className="grid grid-cols-2 gap-4">
-                       {serviceItems.map((service, idx) => (
-                         <Link
-                           key={idx}
-                           to="/services"
-                           className="group flex flex-col items-center gap-2 rounded-lg border border-gray-200 bg-white p-3 text-center shadow-sm transition hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
-                         >
-                           <img
-                             src={service.image}
-                             alt={service.name}
-                             className="h-20 w-20 rounded-md object-cover transition-transform duration-300 group-hover:scale-105"
-                           />
-                           <span className="text-sm font-medium text-gray-800 dark:text-white">{service.name}</span>
-                         </Link>
-                       ))}
-                     </div>
+                     <div className="grid grid-cols-2 gap-3">
+                     {serviceItems.map((service, idx) => (
+                       <Link
+                         key={idx}
+                         to="/services"
+                         className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
+                       >
+                         <img
+                           src={service.image}
+                           alt={service.name}
+                           className="mb-1 h-14 w-14 rounded object-cover"
+                         />
+                         {service.name}
+                       </Link>
+                     ))}
+                   </div>
+                 )}
+              
                      
-                      )}
+                   
                     </div>
                   ) : (
                     <Link
