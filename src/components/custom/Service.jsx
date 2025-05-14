@@ -66,7 +66,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import React from "react"
 import ReactCompareImage from "react-compare-image"
 
-const Service = () => {
+const Service = ({item}) => {
   const beforeImage =
     "https://fixthephoto.com/images/uikit_slider/photo-editing-services-before1603179337_wh960.jpg"
   const afterImage =
@@ -78,10 +78,10 @@ const Service = () => {
         {/* Text Content */}
         <div className="space-y-6">
           <h2 className="text-2xl lg:text-3xl font-semibold text-gray-900 dark:text-white leading-tight">
-            Portrait Photo Editing
+          {item.title}
           </h2>
           <p className="text-base text-gray-700 dark:text-gray-300">
-            <strong className="text-black dark:text-white">$6 per photo.</strong> Enhance your
+            <strong className="text-black dark:text-white">{item.price}</strong> Enhance your
             portrait with expert retouching: body shape adjustments, natural skin
             textures, and realistic edits.
           </p>
