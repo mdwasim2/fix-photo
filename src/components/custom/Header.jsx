@@ -6,7 +6,14 @@ import { Link } from "react-router";
 import { ModeToggle } from "./mode-toggle";
 
 const Header = () => {
-  const navItems = ["Home", "Services", "Portfolio", "Pricing", "Blog", "Contact"];
+  const navItems = [
+    "Home",
+    "Services",
+    "Portfolio",
+    "Pricing",
+    "Blog",
+    "Contact",
+  ];
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false); // New
@@ -22,38 +29,36 @@ const Header = () => {
 
   const serviceItems = [
     {
-      name: "Portrait Retouching",
+      name: "E-commerce Product Photo Editing",
       image:
         "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
     },
     {
-      name: "Body Retouching",
+      name: "Clipping path service",
       image:
         "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
     },
     {
-      name: "Newborn Photo Editing",
+      name: "Gost Mannequin photo Editing Srvice",
       image:
         "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
     },
     {
-      name: "High End Retouching",
+      name: "Jewelry image editing service",
       image:
         "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
     },
     {
-      name: "Wedding Photo Editing",
+      name: "Newborn photo editing Service",
       image:
         "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
     },
     {
-      name: "Clipping Path",
+      name: "High-End Model photo Retouching service",
       image:
         "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
     },
   ];
-
-
 
   return (
     <header
@@ -76,7 +81,6 @@ const Header = () => {
           </Link>
         </div>
 
-        
         <nav className="relative hidden gap-6 text-sm font-medium text-gray-800 md:flex">
           {navItems.map((item) =>
             item === "Services" ? (
@@ -94,7 +98,7 @@ const Header = () => {
                 </Link>
                 {hoveredMenu === "services" && (
                   <div className="absolute top-6 left-0 z-50 pt-4">
-                    <div className="mt-2 grid max-w-[90vw] min-w-[500px] grid-cols-3 gap-3 rounded-lg border bg-white p-4 shadow-lg dark:bg-gray-800">
+                    {/* <div className="mt-2 grid max-w-[90vw] min-w-[500px] grid-cols-3 gap-3 rounded-lg border bg-white p-4 shadow-lg dark:bg-gray-800">
                       {serviceItems.map((service, index) => (
                         <Link
                           key={index}
@@ -109,11 +113,29 @@ const Header = () => {
                           {service.name}
                         </Link>
                       ))}
+                    </div> */}
+                    <div className="mt-2 grid max-w-[90vw] min-w-[600px] grid-cols-3 gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-2xl dark:border-gray-700 dark:bg-gray-900">
+                      {serviceItems.map((service, index) => (
+                        <Link
+                          key={index}
+                          to="/services"
+                          className="group flex flex-col items-center gap-2 rounded-lg border border-gray-200 bg-white p-3 text-center shadow-sm transition hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
+                        >
+                          <img
+                            src={service.image}
+                            alt={service.name}
+                            className="h-30 w-30 rounded-md object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                          <span className="text-sm font-medium text-gray-800 dark:text-white">
+                            {service.name}
+                          </span>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 )}
               </div>
-            ) :  (
+            ) : (
               <Link
                 key={item}
                 to={
@@ -173,22 +195,23 @@ const Header = () => {
                         </button>
                       </div>
                       {isMobileDropdownOpen && (
-                        <div className="grid grid-cols-2 gap-3">
-                          {serviceItems.map((service, idx) => (
-                            <Link
-                              key={idx}
-                              to="/services"
-                              className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
-                            >
-                              <img
-                                src={service.image}
-                                alt={service.name}
-                                className="mb-1 h-14 w-14 rounded object-cover"
-                              />
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
+                       <div className="grid grid-cols-2 gap-4">
+                       {serviceItems.map((service, idx) => (
+                         <Link
+                           key={idx}
+                           to="/services"
+                           className="group flex flex-col items-center gap-2 rounded-lg border border-gray-200 bg-white p-3 text-center shadow-sm transition hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
+                         >
+                           <img
+                             src={service.image}
+                             alt={service.name}
+                             className="h-20 w-20 rounded-md object-cover transition-transform duration-300 group-hover:scale-105"
+                           />
+                           <span className="text-sm font-medium text-gray-800 dark:text-white">{service.name}</span>
+                         </Link>
+                       ))}
+                     </div>
+                     
                       )}
                     </div>
                   ) : (
