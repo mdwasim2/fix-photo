@@ -67,10 +67,7 @@ import ReactCompareImage from "react-compare-image";
 import { Link } from "react-router";
 
 const Service = ({item}) => {
-  const beforeImage =
-    "https://fixthephoto.com/images/uikit_slider/photo-editing-services-before1603179337_wh960.jpg"
-  const afterImage =
-    "https://fixthephoto.com/images/uikit_slider/photo-editing-services-after-wh960.jpg"
+
 
   return (
     <section className="w-full px-3 lg:px-6 py-2.5 lg:py-5">
