@@ -61,10 +61,10 @@
 // };
 
 // export default Services;
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import React from "react"
-import ReactCompareImage from "react-compare-image"
+import { Card, CardContent } from "@/components/ui/card";
+import React from "react";
+import ReactCompareImage from "react-compare-image";
+import { Link } from "react-router";
 
 const Service = ({item}) => {
   const beforeImage =
@@ -81,9 +81,7 @@ const Service = ({item}) => {
           {item.title}
           </h2>
           <p className="text-base text-gray-700 dark:text-gray-300">
-            <strong className="text-black dark:text-white">{item.price}</strong> Enhance your
-            portrait with expert retouching: body shape adjustments, natural skin
-            textures, and realistic edits.
+            <strong className="text-black dark:text-white">{item.price}</strong> {item.descrtiption}
           </p>
           <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
             <li>Color correction & tone balancing</li>
@@ -91,12 +89,12 @@ const Service = ({item}) => {
             <li>Removal of blemishes & stray hairs</li>
             <li>Makeup retouching for a natural look</li>
           </ul>
-          <Button
+          <Link  to="/services"
             variant="outline"
-            className="rounded-full px-6 py-2 shadoww41 hover:bg-[#FF6900] hover:text-white dark:hover:bg-white dark:hover:text-black"
+            className="rounded-full border  px-6 py-2 shadoww41 hover:bg-[#FF6900] hover:text-white dark:hover:bg-white dark:hover:text-black"
           >
             View More
-          </Button>
+          </Link>
         </div>
 
         {/* Compare Image */}
@@ -104,8 +102,8 @@ const Service = ({item}) => {
           <CardContent className="p-0">
             <div className="w-full rounded-xl overflow-hidden">
               <ReactCompareImage
-                leftImage={afterImage}
-                rightImage={beforeImage}
+                leftImage={item.afterImage}
+                rightImage={item.beforeImage}
                 sliderLineWidth={2}
                 sliderLineColor="#fff"
                 handleSize={36}
