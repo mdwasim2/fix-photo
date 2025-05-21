@@ -64,7 +64,7 @@ const ServiceWrapper = () => {
   return (
     <div className="container mt-12">
       <h2 className="mb-2 text-center text-2xl font-bold lg:mb-4 lg:text-3xl">
-        Headshot Retouching Services:
+        Our Image Editing Services:
       </h2>
       <div className="grid grid-cols-2">
         {servicedetails.map((_, index) => (
