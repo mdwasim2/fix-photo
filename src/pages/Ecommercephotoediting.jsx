@@ -14,8 +14,8 @@ import EcommerceImageOrginal5 from "../assets/Ecommerce/original8.jpg";
 import EcommerceImageOrginal2 from "../assets/Ecommerce/original9.jpg";
 import Banner from "../components/custom/Banner";
 import ReviewSection from "../components/custom/ReviewSection";
+import HeadshortPhotoforService from "../components/ServiceComponent/HeadshortPhotoforService";
 import HeadShortWrapper from "../components/ServiceComponent/HeadShortWrapper";
-import HeadshotGallery from "../components/ServiceComponent/HeadshotGallery";
 import PricingPlans from "../components/ServiceComponent/PricingPlans";
 import ServiceImage from "../components/ServiceComponent/Service_image";
 const Ecommercephotoediting = () => {
@@ -178,7 +178,7 @@ const Ecommercephotoediting = () => {
          <PricingPlans/>
         <HeadShortWrapper/>
         <ReviewSection/>
-        <HeadshotGallery/>
+        <HeadshortPhotoforService/>
     </>
   );
 };

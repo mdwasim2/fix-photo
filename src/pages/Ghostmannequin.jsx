@@ -17,8 +17,8 @@ import GostEditedimage5 from "../assets/gost/Done 5.jpg";
 
 import Banner from "../components/custom/Banner";
 import ReviewSection from "../components/custom/ReviewSection";
+import HeadshortPhotoforGhost from "../components/ServiceComponent/HeadshortPhotoforGhost";
 import HeadShortWrapper from "../components/ServiceComponent/HeadShortWrapper";
-import HeadshotGallery from "../components/ServiceComponent/HeadshotGallery";
 import PricingPlans from "../components/ServiceComponent/PricingPlans";
 import ServiceImage from "../components/ServiceComponent/Service_image";
 const Ghostmannequin = () => {
@@ -177,7 +177,7 @@ GostEditedimage6,
         <PricingPlans/>
         <HeadShortWrapper/>
         <ReviewSection/>
-        <HeadshotGallery/>
+        <HeadshortPhotoforGhost/>
     </>
   );
 };

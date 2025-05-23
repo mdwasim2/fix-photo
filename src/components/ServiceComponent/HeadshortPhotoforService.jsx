@@ -10,30 +10,8 @@ import EcommerceImageEdited10 from "../../assets/Ecommerce/done6.jpg";
 import EcommerceImageEdited2 from "../../assets/Ecommerce/done7.jpg";
 import EcommerceImageEdited1 from "../../assets/Ecommerce/done8.jpg";
 import EcommerceImageEdited12 from "../../assets/Ecommerce/done_1.jpg";
-import GostImageEdited1 from "../../assets/gost/Done 10.jpg";
-import GostImageEdited2 from "../../assets/gost/Done 11.jpg";
-import GostImageEdited3 from "../../assets/gost/Done 12.jpg";
-import GostImageEdited4 from "../../assets/gost/Done 13.jpg";
-import GostImageEdited5 from "../../assets/gost/Done 14.jpg";
-import GostImageEdited6 from "../../assets/gost/Done 15.jpg";
-import GostImageEdited7 from "../../assets/gost/Done 16.jpg";
-import GostImageEdited8 from "../../assets/gost/Done 17.jpg";
-import GostImageEdited9 from "../../assets/gost/Done 18.jpg";
-import GostImageEdited10 from "../../assets/gost/Done 19.jpg";
-import GostImageEdited11 from "../../assets/gost/Done 2.jpg";
-import GostImageEdited12 from "../../assets/gost/Done 20.jpg";
-import GostImageEdited13 from "../../assets/gost/Done 21.jpg";
-import GostImageEdited14 from "../../assets/gost/Done 3.jpg";
-import GostImageEdited15 from "../../assets/gost/Done 4.jpg";
-import GostImageEdited16 from "../../assets/gost/Done 5.jpg";
-import GostImageEdited17 from "../../assets/gost/Done 6.jpg";
-import GostImageEdited18 from "../../assets/gost/Done 7.jpg";
-import GostImageEdited19 from "../../assets/gost/Done 8.jpg";
-import GostImageEdited20 from "../../assets/gost/Done 9.jpg";
-import GostImageEdited21 from "../../assets/gost/Done.jpg";
-import JewlryEditingImage from "../../assets/jewellery/done.jpg";
 
-const HeadshotGallery = () => {
+const HeadshortPhotoforService = () => {
   const allImages = [
     EcommerceImageEdited6,
     EcommerceImageEdited5,
@@ -45,29 +23,6 @@ const HeadshotGallery = () => {
     EcommerceImageEdited10,
     EcommerceImageEdited11,
     EcommerceImageEdited12,
-    JewlryEditingImage,
-
-    GostImageEdited1,
-    GostImageEdited2,
-    GostImageEdited3,
-    GostImageEdited4,
-    GostImageEdited5,
-    GostImageEdited6,
-    GostImageEdited7,
-    GostImageEdited8,
-    GostImageEdited9,
-    GostImageEdited10,
-    GostImageEdited11,
-    GostImageEdited12,
-    GostImageEdited13,
-    GostImageEdited14,
-    GostImageEdited15,
-    GostImageEdited16,
-    GostImageEdited17,
-    GostImageEdited18,
-    GostImageEdited19,
-    GostImageEdited20,
-    GostImageEdited21,
   ];
 
   const IMAGES_PER_LOAD = 10;
@@ -157,4 +112,4 @@ const HeadshotGallery = () => {
   );
 };
 
-export default HeadshotGallery;
+export default HeadshortPhotoforService;
