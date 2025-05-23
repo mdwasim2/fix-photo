@@ -30,22 +30,22 @@ const Header = () => {
 const serviceItems = [
   {
     name: "E-commerce Product Photo Editing",
-    image: "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
+    image: "Ecommerce/original6.jpg",
     path: "/services/ecommerce-photo-editing",
   },
   {
     name: "Clipping path service",
-    image: "https://fixthephoto.com/images/uikit_slider/photo-editing-services-after-wh960.jpg",
+    image: "clippingpath/original.jpg",
     path: "/services/clipping-path",
   },
   {
     name: "Gost Mannequin photo Editing Srvice",
-    image: "https://fixthephoto.com/images/uikit_slider/photography-retouching-services-after-wh650.jpg",
+    image: "Gost/Done.jpg",
     path: "/services/ghost-mannequin",
   },
   {
     name: "Jewelry image editing service",
-    image: "https://fixthephoto.com/images/uikit_slider/professional-photo-editing-services-after-wh650.jpg",
+      image: "jewellery/original.jpg",
     path: "/services/jewelry-editing",
   },
   {
