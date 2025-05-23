@@ -1,6 +1,8 @@
 import { Upload } from "lucide-react";
 import { useRef } from "react";
 
+import ClipingpathEditedImage1 from "../assets/clippingpath/done.jpg";
+import ClipingpathOrginalImage1 from "../assets/clippingpath/original.jpg";
 import Banner from "../components/custom/Banner";
 import ReviewSection from "../components/custom/ReviewSection";
 import HeadShortWrapper from "../components/ServiceComponent/HeadShortWrapper";
@@ -15,9 +17,9 @@ const Clippingpath = () => {
       price: "$6 per photo", 
       descrtiption: "We specialize in e-commerce product photo editing, ensuring that your images are optimized for online sales. Our team will enhance colors, remove backgrounds, and make your products look their best.", 
        beforeImage :
-      "https://fixthephoto.com/images/uikit_slider/photo-editing-services-before1603179337_wh960.jpg",
+    ClipingpathEditedImage1,
      afterImage :
-      "https://fixthephoto.com/images/uikit_slider/photo-editing-services-after-wh960.jpg"
+      ClipingpathOrginalImage1
     },
     {
       title: "Clipping path service",
