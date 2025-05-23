@@ -1,5 +1,17 @@
 import { Upload } from "lucide-react";
 import { useRef } from "react";
+import EcommerceImageEdited6 from "../assets/Ecommerce/done10.jpg";
+import EcommerceImageEdited3 from "../assets/Ecommerce/done4.jpg";
+import EcommerceImageEdited1 from "../assets/Ecommerce/done6.jpg";
+import EcommerceImageEdited4 from "../assets/Ecommerce/done7.jpg";
+import EcommerceImageEdited5 from "../assets/Ecommerce/done8.jpg";
+import EcommerceImageEdited2 from "../assets/Ecommerce/done9.jpg";
+import EcommerceImageOrginal6 from "../assets/Ecommerce/original10.jpg";
+import EcommerceImageOrginal3 from "../assets/Ecommerce/original4.jpg";
+import EcommerceImageOrginal1 from "../assets/Ecommerce/original6.jpg";
+import EcommerceImageOrginal4 from "../assets/Ecommerce/original7.jpg";
+import EcommerceImageOrginal5 from "../assets/Ecommerce/original8.jpg";
+import EcommerceImageOrginal2 from "../assets/Ecommerce/original9.jpg";
 import Banner from "../components/custom/Banner";
 import ReviewSection from "../components/custom/ReviewSection";
 import HeadShortWrapper from "../components/ServiceComponent/HeadShortWrapper";
@@ -14,56 +26,61 @@ const Ecommercephotoediting = () => {
       price: "$6 per photo", 
       descrtiption: "We specialize in e-commerce product photo editing, ensuring that your images are optimized for online sales. Our team will enhance colors, remove backgrounds, and make your products look their best.", 
        beforeImage :
-      "https://fixthephoto.com/images/uikit_slider/photo-editing-services-before1603179337_wh960.jpg",
+      EcommerceImageOrginal1,
      afterImage :
-      "https://fixthephoto.com/images/uikit_slider/photo-editing-services-after-wh960.jpg"
+      
+      EcommerceImageEdited1
     },
     {
       title: "Clipping path service",
       price: "$10 per photo",
       descrtiption: "We provide high-quality clipping path services for all types of images, including product photos, portraits, and more. Our team of experts will ensure that your images are perfectly cut out and ready for use.",  
-      beforeImage :
-      "https://fixthephoto.com/images/uikit_slider/photography-retouching-services-before-wh650.jpg",
+   beforeImage :
+      EcommerceImageOrginal2,
      afterImage :
-      "https://fixthephoto.com/images/uikit_slider/photography-retouching-services-after-wh650.jpg"
+      
+      EcommerceImageEdited2
     },
     {
       title: "Gost Mannequin photo Editing Srvice",
       price: "$7 per photo",  
       descrtiption: "Our ghost mannequin photo editing service is perfect for fashion retailers. We will remove the mannequin from your images, leaving only the clothing item for a clean and professional look.",
       beforeImage :
-      "https://fixthephoto.com/images/uikit_slider/professional-photo-editing-services-before-wh650.jpg",
+      EcommerceImageOrginal3,
      afterImage :
-      "https://fixthephoto.com/images/uikit_slider/professional-photo-editing-services-after-wh650.jpg"
+      
+      EcommerceImageEdited3
     },
     {
       title: "Jewelry image editing service",
       price: "$6 per photo",  
       descrtiption: "We specialize in jewelry image editing, ensuring that your images are bright, clear, and eye-catching. Our team will enhance colors, remove backgrounds, and make your jewelry look its best.",
       beforeImage :
-      "https://fixthephoto.com/images/uikit_slider/photoshop-services-online--before-wh650.jpg",
+      EcommerceImageOrginal4,
      afterImage :
-      "https://fixthephoto.com/images/uikit_slider/photoshop-services-online--after-wh650.jpg"
+      
+      EcommerceImageEdited4
     },
     {
       title: "Newborn photo editing Service",
       price: "$9 per photo",
       descrtiption: "Our newborn photo editing service is perfect for parents and photographers. We will enhance colors, remove blemishes, and make your newborn photos look their best.",
-      beforeImage :
-      "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-before-wh650.jpg",
+   beforeImage :
+      EcommerceImageOrginal5,
      afterImage :
-      "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-after-wh650.jpg"
+      
+      EcommerceImageEdited5
 
     },
     {
       title: "High-End Model photo Retouching service",
       price: "$13 per photo",
       descrtiption: "We provide high-end model photo retouching services for fashion and beauty images. Our team of experts will enhance skin tones, remove blemishes, and make your models look their best.",
-      beforeImage :
-      "https://fixthephoto.com/images/uikit_slider/online-photo-editing-services-before-wh650.jpg",
+   beforeImage :
+      EcommerceImageOrginal6,
      afterImage :
-      "https://fixthephoto.com/images/uikit_slider/online-photo-editing-services-after-wh650.jpg"
-  
+      
+      EcommerceImageEdited6
     }
   ]
   const fileInputRef = useRef(null);
