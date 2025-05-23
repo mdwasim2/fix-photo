@@ -3,6 +3,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
+import ClipingpathImage from "../../assets/clippingpath/original.jpg";
+import EcommerceImage from "../../assets/Ecommerce/original6.jpg";
+import GostmanImage from "../../assets/gost/Done 4.jpg";
+import JewlleryImage from "../../assets/jewellery/original.jpg";
 import { ModeToggle } from "./mode-toggle";
 
 const Header = () => {
@@ -27,39 +31,40 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-const serviceItems = [
-  {
-    name: "E-commerce Product Photo Editing",
-    image: "Ecommerce/original6.jpg",
-    path: "/services/ecommerce-photo-editing",
-  },
-  {
-    name: "Clipping path service",
-    image: "clippingpath/original.jpg",
-    path: "/services/clipping-path",
-  },
-  {
-    name: "Gost Mannequin photo Editing Srvice",
-    image: "Gost/Done.jpg",
-    path: "/services/ghost-mannequin",
-  },
-  {
-    name: "Jewelry image editing service",
-      image: "jewellery/original.jpg",
-    path: "/services/jewelry-editing",
-  },
-  {
-    name: "Newborn photo editing Service",
-    image: "https://fixthephoto.com/images/uikit_slider/photoshop-services-online--after-wh650.jpg",
-    path: "/services/newborn-editing",
-  },
-  {
-    name: "High-End Model photo Retouching service",
-    image: "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-after-wh650.jpg",
-    path: "/services/highend-model-retouching",
-  },
-];
-
+  const serviceItems = [
+    {
+      name: "E-commerce Product Photo Editing",
+      image:  EcommerceImage ,
+      path: "/services/ecommerce-photo-editing",
+    },
+    {
+      name: "Clipping path service",
+      image: ClipingpathImage,
+      path: "/services/clipping-path",
+    },
+    {
+      name: "Gost Mannequin photo Editing Srvice",
+      image: GostmanImage,
+      path: "/services/ghost-mannequin",
+    },
+    {
+      name: "Jewelry image editing service",
+      image: JewlleryImage,
+      path: "/services/jewelry-editing",
+    },
+    {
+      name: "Newborn photo editing Service",
+      image:
+        "https://fixthephoto.com/images/uikit_slider/photoshop-services-online--after-wh650.jpg",
+      path: "/services/newborn-editing",
+    },
+    {
+      name: "High-End Model photo Retouching service",
+      image:
+        "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-after-wh650.jpg",
+      path: "/services/highend-model-retouching",
+    },
+  ];
 
   return (
     <header
@@ -116,21 +121,20 @@ const serviceItems = [
                       ))}
                     </div> */}
                     <div className="mt-2 grid max-w-[90vw] min-w-[600px] grid-cols-3 gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-2xl dark:border-gray-700 dark:bg-gray-900">
-                    {serviceItems.map((service, idx) => (
-  <Link
-    key={idx}
-    to={service.path}
-    className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
-  >
-    <img
-      src={service.image}
-      alt={service.name}
-      className="mb-1 h-14 w-14 rounded object-cover"
-    />
-    {service.name}
-  </Link>
-))}
-
+                      {serviceItems.map((service, idx) => (
+                        <Link
+                          key={idx}
+                          to={service.path}
+                          className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
+                        >
+                          <img
+                            src={service.image}
+                            alt={service.name}
+                            className="mb-1 h-14 w-14 rounded object-cover"
+                          />
+                          {service.name}
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -195,26 +199,23 @@ const serviceItems = [
                         </button>
                       </div>
                       {isMobileDropdownOpen && (
-                     <div className="grid grid-cols-2 gap-3">
-                     {serviceItems.map((service, idx) => (
-                       <Link
-                         key={idx}
-                       to={service.path}
-                         className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
-                       >
-                         <img
-                           src={service.image}
-                           alt={service.name}
-                           className="mb-1 h-14 w-14 rounded object-cover"
-                         />
-                         {service.name}
-                       </Link>
-                     ))}
-                   </div>
-                 )}
-              
-                     
-                   
+                        <div className="grid grid-cols-2 gap-3">
+                          {serviceItems.map((service, idx) => (
+                            <Link
+                              key={idx}
+                              to={service.path}
+                              className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
+                            >
+                              <img
+                                src={service.image}
+                                alt={service.name}
+                                className="mb-1 h-14 w-14 rounded object-cover"
+                              />
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <Link
