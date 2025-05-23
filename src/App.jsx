@@ -9,6 +9,7 @@ import Ecommercephotoediting from "./pages/Ecommercephotoediting";
 import Ghostmannequin from "./pages/Ghostmannequin";
 import Highendretouching from "./pages/Highendretouching";
 import Home from "./pages/Home";
+import Jewelryediting from "./pages/Jewelryediting";
 import Newbornediting from "./pages/Newbornediting";
 import Portfolio from "./pages/Portfolio";
 import Pricing from "./pages/Pricing";
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/services/jewelry-editing",
-        Component: Ghostmannequin,
+        Component: Jewelryediting,
       },
       {
         path: "/services/newborn-editing",

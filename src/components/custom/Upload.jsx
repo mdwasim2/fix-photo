@@ -2,17 +2,17 @@ import { Upload } from "lucide-react";
 import { useRef } from "react";
 
 const UploadSection = () => {
-    const fileInputRef = useRef(null);
+  const fileInputRef = useRef(null);
 
-    const handleUploadClick = () => {
-      fileInputRef.current?.click(); // Open file picker
-    };
-  
+  const handleUploadClick = () => {
+    fileInputRef.current?.click(); // Open file picker
+  };
+
   return (
-    <section className="bg-gray-50 dark:bg-gray-800 px-4 py-10 text-center">
+    <section className="bg-gray-50 px-4 py-10 text-center dark:bg-gray-800">
       <div className="container">
         <h2 className="mb-2 text-2xl font-semibold md:text-3xl">
-High-End Model photo Retouching service : 
+          High-End Model photo Retouching service :
         </h2>
         <p className="mx-auto mb-10 max-w-2xl text-gray-600">
           Fixthephoto is the most trusted agency in online photo retouching
@@ -55,36 +55,36 @@ High-End Model photo Retouching service :
         </div>
 
         {/* Upload Box */}
-        <div className="w-full h-[300px] flex items-center justify-center rounded-lg border border-dashed border-gray-300 bg-white dark:bg-gray-700 p-8 shadow-sm">
+        <div className="flex h-[300px] w-full items-center justify-center rounded-lg border border-dashed border-gray-300 bg-white p-8 shadow-sm dark:bg-gray-700">
           {/* Hidden file input */}
           <div className="">
-          <input
-            ref={fileInputRef}
-            type="file"
-            multiple
-            webkitdirectory="true"
-            className="hidden"
-            onChange={(e) => {
-              const files = e.target.files;
-              if (files) {
-                console.log("Files uploaded:", files);
-                // You can handle file upload logic here
-              }
-            }}
-          />
+            <input
+              ref={fileInputRef}
+              type="file"
+              multiple
+              webkitdirectory="true"
+              className="hidden"
+              onChange={(e) => {
+                const files = e.target.files;
+                if (files) {
+                  console.log("Files uploaded:", files);
+                  // You can handle file upload logic here
+                }
+              }}
+            />
 
-          <button
-            onClick={handleUploadClick}
-            className="relative mx-auto flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-orange-400 to-yellow-400 px-8 py-5 font-bold text-white shadow-lg transition-transform duration-300 hover:scale-105 uppercase"
-          >
-            <Upload className="h-5 w-5" />
-            Upload Image
-            <span className="absolute inset-0 -skew-x-12 animate-[shine_4s_linear_infinite] bg-white opacity-10"></span>
-          </button>
+            <button
+              onClick={handleUploadClick}
+              className="relative mx-auto flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-orange-400 to-yellow-400 px-8 py-5 font-bold text-white uppercase shadow-lg transition-transform duration-300 hover:scale-105"
+            >
+              <Upload className="h-5 w-5" />
+              Upload Image
+              <span className="absolute inset-0 -skew-x-12 animate-[shine_4s_linear_infinite] bg-white opacity-10"></span>
+            </button>
 
-          <p className="mt-4 text-sm text-gray-500">
-            Drag image here or click to upload
-          </p>
+            <p className="mt-4 text-sm text-gray-500">
+              Drag image here or click to upload
+            </p>
           </div>
         </div>
       </div>
