@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { ModeToggle } from "./mode-toggle";
 
@@ -27,38 +27,39 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const serviceItems = [
-    {
-      name: "E-commerce Product Photo Editing",
-      image:
-        "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
-    },
-    {
-      name: "Clipping path service",
-      image:
-        "https://fixthephoto.com/images/uikit_slider/photo-editing-services-after-wh960.jpg",
-    },
-    {
-      name: "Gost Mannequin photo Editing Srvice",
-      image:
-        "https://fixthephoto.com/images/uikit_slider/photography-retouching-services-after-wh650.jpg",
-    },
-    {
-      name: "Jewelry image editing service",
-      image:
-        "https://fixthephoto.com/images/uikit_slider/professional-photo-editing-services-after-wh650.jpg",
-    },
-    {
-      name: "Newborn photo editing Service",
-      image:
-        "https://fixthephoto.com/images/uikit_slider/photoshop-services-online--after-wh650.jpg",
-    },
-    {
-      name: "High-End Model photo Retouching service",
-      image:
-        "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-after-wh650.jpg",
-    },
-  ];
+const serviceItems = [
+  {
+    name: "E-commerce Product Photo Editing",
+    image: "https://img.fixthephoto.com/UserFiles/headshot-retouching-before-pro-thumb-1.jpg",
+    path: "/services/ecommerce-photo-editing",
+  },
+  {
+    name: "Clipping path service",
+    image: "https://fixthephoto.com/images/uikit_slider/photo-editing-services-after-wh960.jpg",
+    path: "/services/clipping-path",
+  },
+  {
+    name: "Gost Mannequin photo Editing Srvice",
+    image: "https://fixthephoto.com/images/uikit_slider/photography-retouching-services-after-wh650.jpg",
+    path: "/services/ghost-mannequin",
+  },
+  {
+    name: "Jewelry image editing service",
+    image: "https://fixthephoto.com/images/uikit_slider/professional-photo-editing-services-after-wh650.jpg",
+    path: "/services/jewelry-editing",
+  },
+  {
+    name: "Newborn photo editing Service",
+    image: "https://fixthephoto.com/images/uikit_slider/photoshop-services-online--after-wh650.jpg",
+    path: "/services/newborn-editing",
+  },
+  {
+    name: "High-End Model photo Retouching service",
+    image: "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-after-wh650.jpg",
+    path: "/services/highend-model-retouching",
+  },
+];
+
 
   return (
     <header
@@ -115,22 +116,21 @@ const Header = () => {
                       ))}
                     </div> */}
                     <div className="mt-2 grid max-w-[90vw] min-w-[600px] grid-cols-3 gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-2xl dark:border-gray-700 dark:bg-gray-900">
-                      {serviceItems.map((service, index) => (
-                        <Link
-                          key={index}
-                          to="/services"
-                          className="group flex flex-col items-center gap-2 rounded-lg border border-gray-200 bg-white p-2 text-center shadow-sm transition hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
-                        >
-                          <img
-                            src={service.image}
-                            alt={service.name}
-                            className="h-30 w-30 rounded-md object-cover transition-transform duration-300 group-hover:scale-105"
-                          />
-                          <span className="text-sm font-medium text-gray-800 dark:text-white">
-                            {service.name}
-                          </span>
-                        </Link>
-                      ))}
+                    {serviceItems.map((service, idx) => (
+  <Link
+    key={idx}
+    to={service.path}
+    className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
+  >
+    <img
+      src={service.image}
+      alt={service.name}
+      className="mb-1 h-14 w-14 rounded object-cover"
+    />
+    {service.name}
+  </Link>
+))}
+
                     </div>
                   </div>
                 )}
@@ -199,7 +199,7 @@ const Header = () => {
                      {serviceItems.map((service, idx) => (
                        <Link
                          key={idx}
-                         to="/services"
+                       to={service.path}
                          className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
                        >
                          <img

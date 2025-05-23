@@ -1,4 +1,3 @@
-import React from "react";
 import ServiceImage from "./Service_image";
 
 const ServiceWrapper = () => {
@@ -64,7 +63,7 @@ const ServiceWrapper = () => {
   return (
     <div className="container mt-12">
       <h2 className="mb-2 text-center text-2xl font-bold lg:mb-4 lg:text-3xl">
-        Our Image Editing Services:
+                High-End Model photo Retouching service:
       </h2>
       <div className="grid grid-cols-2">
         {servicedetails.map((_, index) => (

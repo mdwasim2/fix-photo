@@ -12,7 +12,7 @@ const UploadSection = () => {
     <section className="bg-gray-50 dark:bg-gray-800 px-4 py-10 text-center">
       <div className="container">
         <h2 className="mb-2 text-2xl font-semibold md:text-3xl">
-          Photo Retouching Services | Professional Photo Editing
+High-End Model photo Retouching service : 
         </h2>
         <p className="mx-auto mb-10 max-w-2xl text-gray-600">
           Fixthephoto is the most trusted agency in online photo retouching
