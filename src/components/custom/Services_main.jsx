@@ -6,6 +6,7 @@ import GostEditedimage1 from "../../assets/gost/Done.jpg";
 import GostOriginalimage1 from "../../assets/gost/Orginal.jpg";
 import JewlleryImageEdited from "../../assets/jewellery/done.jpg";
 import JewlleryImageOrginal from "../../assets/jewellery/original.jpg";
+
 import Service from './Service';
 
 const Services_main = () => {

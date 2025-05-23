@@ -1,18 +1,39 @@
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { X } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
+import ClipingpathEditedImage1 from "../../assets/clippingpath/done.jpg";
+
+import EcommerceImageEdited1 from "../../assets/Ecommerce/done6.jpg";
+import GostEditedimage1 from "../../assets/gost/Done.jpg";
+
+import EcommerceImageEdited0 from "../../assets/Ecommerce/done.jpg";
+import EcommerceImageEdited6 from "../../assets/Ecommerce/done10.jpg";
+import EcommerceImageEdited11 from "../../assets/Ecommerce/done11.jpg";
+import EcommerceImageEdited3 from "../../assets/Ecommerce/done3.jpg";
+import EcommerceImageEdited4 from "../../assets/Ecommerce/done4.jpg";
+import EcommerceImageEdited5 from "../../assets/Ecommerce/done5.jpg";
+import EcommerceImageEdited10 from "../../assets/Ecommerce/done6.jpg";
+import EcommerceImageEdited2 from "../../assets/Ecommerce/done7.jpg";
+import EcommerceImageEdited12 from "../../assets/Ecommerce/done_1.jpg";
+import JewlleryImageEdited from "../../assets/jewellery/done.jpg";
+
 
 const galleryImages = [
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
-  "https://img.fixthephoto.com/images/home-before-after-thumb/image-retouching-services-before-after-thumb.jpg",
+ClipingpathEditedImage1,
+EcommerceImageEdited1,
+GostEditedimage1,
+JewlleryImageEdited,
+EcommerceImageEdited0,
+EcommerceImageEdited6,
+EcommerceImageEdited11, 
+EcommerceImageEdited3,
+EcommerceImageEdited4,
+EcommerceImageEdited5,
+EcommerceImageEdited10, 
+EcommerceImageEdited2,
+EcommerceImageEdited1,
+EcommerceImageEdited12,
+EcommerceImageEdited6,  
 ];
 
 const Gallery = () => {
