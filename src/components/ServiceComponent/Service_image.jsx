@@ -1,5 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card"
-import React from "react"
 import ReactCompareImage from "react-compare-image"
 
 const ServiceImage = ({item}) => {
@@ -22,23 +20,24 @@ const ServiceImage = ({item}) => {
         </p>
 
         {/* Compare Image */}
-        <Card className="shadow-lg overflow-hidden rounded-xl dark:bg-gray-800">
-          <CardContent className="p-0">
-            <ReactCompareImage
-              leftImage={item.afterImage}
-              rightImage={item.beforeImage}
-         
-              sliderLineWidth={2}
-              sliderLineColor="#fff"
-              handleSize={36}
-              handle={
-                <div className="flex h-9 w-9 items-center justify-center rounded-full border bg-white dark:bg-gray-700 shadow">
-                  <span className="text-sm font-bold text-gray-700 dark:text-white">⇄</span>
-                </div>
-              }
-            />
-          </CardContent>
-        </Card>
+        <div className="shadow-xl dark:bg-gray-800">
+          <div className="p-0 w-full h-full">
+            <div className="w-full rounded-xl overflow-hidden ">
+              <ReactCompareImage
+                leftImage={item.afterImage}
+                rightImage={item.beforeImage}
+                sliderLineWidth={2}
+                sliderLineColor="#fff"
+                handleSize={36}
+                handle={
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full border bg-white dark:bg-gray-700 shadow">
+                    <span className="text-sm font-bold text-gray-700 dark:text-white">⇄</span>
+                  </div>
+                }
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
