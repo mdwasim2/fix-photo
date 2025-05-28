@@ -1,6 +1,4 @@
 
-import { Card, CardContent } from "@/components/ui/card";
-import React from "react";
 import ReactCompareImage from "react-compare-image";
 import { Link } from "react-router";
 
@@ -33,9 +31,9 @@ const Service = ({item}) => {
         </div>
 
         {/* Compare Image */}
-        <Card className="shadow-xl dark:bg-gray-800">
-          <CardContent className="p-0">
-            <div className="w-full rounded-xl overflow-hidden">
+        <div className="shadow-xl dark:bg-gray-800">
+          <div className="p-0 w-full h-full">
+            <div className="w-full rounded-xl overflow-hidden ">
               <ReactCompareImage
                 leftImage={item.afterImage}
                 rightImage={item.beforeImage}
@@ -49,8 +47,8 @@ const Service = ({item}) => {
                 }
               />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
     </section>
   )
