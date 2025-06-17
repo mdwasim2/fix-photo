@@ -1,40 +1,39 @@
 import { ChevronLeft, ChevronRight, Star } from "lucide-react"
-import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 
 const testimonials = [
   {
-    name: "Kate Perkins",
-    role: "A verified customer on portrait photo enhancement services",
+    name: "Celine S",
+    role: "E-commerce Store Owner",
     rating: 5,
     date: "04/08/2022",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     content: `
-      Some years before, I was a frequent user of automatic image retouching services.
-      But as soon as I discovered the world of photo industry, I began to understand that this type of cooperation did not suit me at all.
-      So, I referred to freelance photo retouchers but this co-working also did not satisfy me, that was rather slow.
-      Then I addressed FixThePhoto. To make sure of their high-quality, I gave them one testing order with photo correction.
-      Since then I have been successfully working with them for half a year. No hidden problems concerning pricing, no delays.
-      This touch up service can be recommended.
+      Amazing experience! I sent in a batch of product photos for editing, and they came back looking clean, sharp, and ready for my website. The clipping path and ecommerce photo retouching were spot on, and these services were all fast, affordable, and super professional. The team surprisingly even delivered ahead of schedule. I’ll definitely be using this service again for all my future product launches!
     `,
   },
   {
-    name: "Kate Perkins",
-    role: "A verified customer on portrait photo enhancement services",
+    name: "Mark Z",
+    role: "Photographer",
     rating: 5,
     date: "04/08/2022",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
     content: `
-      Some years before, I was a frequent user of automatic image retouching services.
-      But as soon as I discovered the world of photo industry, I began to understand that this type of cooperation did not suit me at all.
-      So, I referred to freelance photo retouchers but this co-working also did not satisfy me, that was rather slow.
-      Then I addressed FixThePhoto. To make sure of their high-quality, I gave them one testing order with photo correction.
-      Since then I have been successfully working with them for half a year. No hidden problems concerning pricing, no delays.
-      This touch up service can be recommended.
+      As a photographer, I’m picky about who edits my work, but this team has exceeded all my expectations. The ghost mannequin editing was seamless, and the newborn photo edits all had that soft, dreamy touch I wanted. What stood out even more was their commitment to privacy and quick turnaround. Got quality work done while supporting a noble pursuit, and so I especially loved that they enabled my business to help others in more than one way!
     `,
   },
+   {
+    name: "Annie F",
+    role: "Jewellery Brand Owner",
+    rating: 5,
+    date: "04/08/2022",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    content: `
+      I needed high-end, professional editing for my jewellery line, and I’m so glad I stumbled upon this company’s services. Every piece looks polished, vibrant, and ready for my e-commerce store. The attention to detail was excellent - no dust, perfect lighting, and beautiful clarity. Moreover, knowing my order helped educate editors and contribute to society made the experience even more meaningful
+    `,
+  }
   // You can add more testimonials if needed
 ]
 
