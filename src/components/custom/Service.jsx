@@ -17,10 +17,10 @@ const Service = ({item}) => {
             <strong className="text-black dark:text-white">{item.price}</strong> {item.descrtiption}
           </p>
           <ul className="list-disc list-inside text-sm text-gray-700 dark:text-gray-300 space-y-1">
-            <li>Color correction & tone balancing</li>
-            <li>Skin smoothing & glow enhancement</li>
-            <li>Removal of blemishes & stray hairs</li>
-            <li>Makeup retouching for a natural look</li>
+            {item.features.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          
           </ul>
           <Link  to="/services"
             variant="outline"

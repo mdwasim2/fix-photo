@@ -12,12 +12,10 @@ const UploadSection = () => {
     <section className="bg-gray-50 px-4 py-10 text-center dark:bg-gray-800">
       <div className="container">
         <h2 className="mb-2 text-2xl font-semibold md:text-3xl">
-          High-End Model photo Retouching service :
+         High Quality Ecommerce Product Photo Editing Services :
         </h2>
         <p className="mx-auto mb-10 max-w-2xl text-gray-600">
-          Fixthephoto is the most trusted agency in online photo retouching
-          business since 2003. Simply upload photos, write your requirements,
-          and we’ll take care of the rest.
+          Imagefixlab has been a trusted and beloved name in the e-commerce photo editing services industry since 2011. Just assuredly upload your photos, let us know of your criteria, and simply consider your work done.
         </p>
 
         {/* Features */}
