@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick-theme.css";
@@ -44,6 +44,7 @@ const Banner = () => {
 
   return (
     <div className="relative w-full max-w-[1900px] mx-auto px-4 ">
+      
       <Slider {...settings}>
         {images.map((item, index) => (
           <div key={index} className="rounded-2xl overflow-hidden">
