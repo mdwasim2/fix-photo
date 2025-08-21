@@ -3,10 +3,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ChevronDown, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import ClipingpathImage from "../../assets/clippingpath/original.jpg";
-import EcommerceImage from "../../assets/Ecommerce/original6.jpg";
-import GostmanImage from "../../assets/gost/Done 4.jpg";
-import JewlleryImage from "../../assets/jewellery/original.jpg";
 import { ModeToggle } from "./mode-toggle";
 
 const Header = () => {
@@ -20,9 +16,10 @@ const Header = () => {
   ];
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false); // New
+  const [scrolled, setScrolled] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(null);
-  // Scroll Effect
+  const [hoveredSubMenu, setHoveredSubMenu] = useState(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -31,38 +28,37 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const serviceItems = [
+  const serviceDropdown = [
     {
-      name: "E-commerce Product Photo Editing",
-      image:  EcommerceImage ,
-      path: "/services/ecommerce-photo-editing",
+      name: "Background Removal Service",
+      path: "/services/background-removal",
+      image: "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-before-wh650.jpg",
     },
     {
-      name: "Clipping path service",
-      image: ClipingpathImage,
-      path: "/services/clipping-path",
-    },
-    {
-      name: "Gost Mannequin photo Editing Srvice",
-      image: GostmanImage,
-      path: "/services/ghost-mannequin",
-    },
-    {
-      name: "Jewelry image editing service",
-      image: JewlleryImage,
-      path: "/services/jewelry-editing",
-    },
-    {
-      name: "Newborn photo editing Service",
-      image:
-        "https://fixthephoto.com/images/uikit_slider/photoshop-services-online--after-wh650.jpg",
-      path: "/services/newborn-editing",
-    },
-    {
-      name: "High-End Model photo Retouching service",
-      image:
-        "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-after-wh650.jpg",
-      path: "/services/highend-model-retouching",
+      name: "Photography Post-Production Services",
+      image: "https://fixthephoto.com/images/uikit_slider/online-photo-editing-services-before-wh650.jpg",
+      subItems: [
+        {
+          name: "E-commerce Photo Editing Services",
+          path: "/services/ecommerce-photo-editing",
+          image: "https://fixthephoto.com/images/uikit_slider/photo-editing-services-for-photographers-after-wh650.jpg",
+        },
+        {
+          name: "Wedding Photo Editing Services",
+          path: "/services/wedding-photo-editing",
+          image: "https://fixthephoto.com/images/uikit_slider/wedding-photography-edit-after1594117209_wh960.jpg",
+        },
+        {
+          name: "Fashion Photo Editing Services",
+          path: "/services/fashion-photo-editing",
+          image: "https://img.fixthephoto.com/images/examples/girl_editing_before-after.jpg",
+        },
+        {
+          name: "Jewelry Photo Editing Services",
+          path: "/services/jewelry-photo-editing",
+          image: "https://fixthephoto.com/images/uikit_slider/jewelry-phot-retouching-after1595346749_wh960.jpg",
+        },
+      ],
     },
   ];
 
@@ -74,7 +70,7 @@ const Header = () => {
     >
       <nav className="flex w-full items-center justify-between">
         {/* LOGO */}
-        <div className="">
+        <div>
           <Link to="/">
             <img
               src="https://fixthephoto.com/images/fixthephoto-logo-photo-retouching-d.png"
@@ -87,6 +83,7 @@ const Header = () => {
           </Link>
         </div>
 
+        {/* Desktop Nav */}
         <nav className="relative hidden gap-6 text-sm font-medium text-gray-800 md:flex">
           {navItems.map((item) =>
             item === "Services" ? (
@@ -94,7 +91,10 @@ const Header = () => {
                 key={item}
                 className="relative"
                 onMouseEnter={() => setHoveredMenu("services")}
-                onMouseLeave={() => setHoveredMenu(null)}
+                onMouseLeave={() => {
+                  setHoveredMenu(null);
+                  setHoveredSubMenu(null);
+                }}
               >
                 <Link
                   to="/services"
@@ -104,37 +104,48 @@ const Header = () => {
                 </Link>
                 {hoveredMenu === "services" && (
                   <div className="absolute top-6 left-0 z-50 pt-4">
-                    {/* <div className="mt-2 grid max-w-[90vw] min-w-[500px] grid-cols-3 gap-3 rounded-lg border bg-white p-4 shadow-lg dark:bg-gray-800">
-                      {serviceItems.map((service, index) => (
-                        <Link
-                          key={index}
-                          to="/services"
-                          className="flex flex-col items-center rounded p-2 text-center text-sm text-black transition dark:text-white"
-                        >
-                          <img
-                            src={service.image}
-                            alt={service.name}
-                            className="mb-2 h-16 w-16 rounded object-cover"
-                          />
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div> */}
-                    <div className="mt-2 grid max-w-[90vw] min-w-[600px] grid-cols-3 gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-2xl dark:border-gray-700 dark:bg-gray-900">
-                      {serviceItems.map((service, idx) => (
-                        <Link
-                          key={idx}
-                          to={service.path}
-                          className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
-                        >
-                          <img
-                            src={service.image}
-                            alt={service.name}
-                            className="mb-1 h-14 w-14 rounded object-cover"
-                          />
-                          {service.name}
-                        </Link>
-                      ))}
+                    <div className="min-w-[320px] rounded-xl border border-gray-200 bg-white p-4 shadow-2xl dark:border-gray-700 dark:bg-gray-900">
+                      {serviceDropdown.map((service) =>
+                        service.subItems ? (
+                          <div
+                            key={service.name}
+                            className="relative"
+                            onMouseEnter={() => setHoveredSubMenu(service.name)}
+                            onMouseLeave={() => setHoveredSubMenu(null)}
+                          >
+                            <div className="flex items-center justify-between cursor-pointer px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
+                              <div className="flex items-center gap-2">
+                                <img src={service.image} alt={service.name} className="w-8 h-8 rounded object-cover" />
+                                <span className="text-gray-700 dark:text-white">{service.name}</span>
+                              </div>
+                              <ChevronDown className="ml-2 h-4 w-4 text-orange-500" />
+                            </div>
+                            {hoveredSubMenu === service.name && (
+                              <div className="absolute left-full top-0 z-50 min-w-[250px] rounded-xl border border-gray-200 bg-white p-3 shadow-2xl dark:border-gray-700 dark:bg-gray-900">
+                                {service.subItems.map((sub) => (
+                                  <Link
+                                    key={sub.name}
+                                    to={sub.path}
+                                    className="flex items-center gap-2 px-2 py-2 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 rounded"
+                                  >
+                                    <img src={sub.image} alt={sub.name} className="w-7 h-7 rounded object-cover" />
+                                    {sub.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <Link
+                            key={service.name}
+                            to={service.path}
+                            className="flex items-center gap-2 px-2 py-2 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 rounded"
+                          >
+                            <img src={service.image} alt={service.name} className="w-8 h-8 rounded object-cover" />
+                            {service.name}
+                          </Link>
+                        )
+                      )}
                     </div>
                   </div>
                 )}
@@ -199,21 +210,40 @@ const Header = () => {
                         </button>
                       </div>
                       {isMobileDropdownOpen && (
-                        <div className="grid grid-cols-2 gap-3">
-                          {serviceItems.map((service, idx) => (
-                            <Link
-                              key={idx}
-                              to={service.path}
-                              className="flex flex-col items-center rounded p-2 text-center text-sm text-gray-700 transition hover:bg-gray-100 dark:text-white"
+                        <div className="flex flex-col gap-2">
+                          <Link
+                            to="/services/background-removal"
+                            className="flex items-center gap-2 px-2 py-2 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 rounded"
+                          >
+                            <img src={serviceDropdown[0].image} alt="Background Removal Service" className="w-8 h-8 rounded object-cover" />
+                            Background Removal Service
+                          </Link>
+                          <div>
+                            <div
+                              className="flex items-center justify-between cursor-pointer px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-800"
+                              onClick={() => setHoveredSubMenu("Photography Post-Production Services")}
                             >
-                              <img
-                                src={service.image}
-                                alt={service.name}
-                                className="mb-1 h-14 w-14 rounded object-cover"
-                              />
-                              {service.name}
-                            </Link>
-                          ))}
+                              <div className="flex items-center gap-2">
+                                <img src={serviceDropdown[1].image} alt="Photography Post-Production Services" className="w-8 h-8 rounded object-cover" />
+                                <span className="text-gray-700 dark:text-white">Photography Post-Production Services</span>
+                              </div>
+                              <ChevronDown className="ml-2 h-4 w-4 text-orange-500" />
+                            </div>
+                            {hoveredSubMenu === "Photography Post-Production Services" && (
+                              <div className="ml-4 flex flex-col gap-1">
+                                {serviceDropdown[1].subItems.map((sub) => (
+                                  <Link
+                                    key={sub.name}
+                                    to={sub.path}
+                                    className="flex items-center gap-2 px-2 py-2 text-gray-700 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-800 rounded"
+                                  >
+                                    <img src={sub.image} alt={sub.name} className="w-7 h-7 rounded object-cover" />
+                                    {sub.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         </div>
                       )}
                     </div>
