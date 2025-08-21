@@ -4,13 +4,13 @@ import { ThemeProvider } from "./components/custom/theme-provider";
 import Rootlayout from "./layout/Rootlayout";
 import BackgroundRemova from "./pages/BackgroundRemova";
 import Blog from "./pages/Blog";
-import Clippingpath from "./pages/Clipping-path";
 import Contact from "./pages/Contact";
 import Ghostmannequin from "./pages/Ghostmannequin";
 import Highendretouching from "./pages/Highendretouching";
 import Home from "./pages/Home";
 import Jewelryediting from "./pages/Jewelryediting";
 import Newbornediting from "./pages/Newbornediting";
+import PhotographyServices from "./pages/PhotographyServices";
 import Portfolio from "./pages/Portfolio";
 import Pricing from "./pages/Pricing";
 import ServicePage from "./pages/ServicePage";
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
         Component: BackgroundRemova,
       },
       {
-        path: "/services/clipping-path",
-        Component: Clippingpath,
+        path: "/services/photography-services",
+        Component: PhotographyServices,
       },
       {
         path: "/services/ghost-mannequin",

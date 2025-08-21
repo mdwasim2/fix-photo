@@ -37,6 +37,7 @@ const Header = () => {
     {
       name: "Photography Post-Production Services",
       image: "https://fixthephoto.com/images/uikit_slider/online-photo-editing-services-before-wh650.jpg",
+      path: "/services/photography-services",
       subItems: [
         {
           name: "E-commerce Photo Editing Services",
@@ -116,7 +117,8 @@ const Header = () => {
                             <div className="flex items-center justify-between cursor-pointer px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-800">
                               <div className="flex items-center gap-2">
                                 <img src={service.image} alt={service.name} className="w-8 h-8 rounded object-cover" />
-                                <span className="text-gray-700 dark:text-white">{service.name}</span>
+             
+                                <Link to={service.path} className="text-gray-700 dark:text-white">{service.name}</Link>
                               </div>
                               <ChevronDown className="ml-2 h-4 w-4 text-orange-500" />
                             </div>
