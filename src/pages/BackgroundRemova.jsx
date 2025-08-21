@@ -70,7 +70,7 @@ const BackgroundRemova = () => {
           <h1 className="text-4xl md:text-5xl leading-tight font-extrabold text-orange-600 mb-4 drop-shadow">
             Professional Background Removal Service
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-6 font-medium">
+          <p className="text-lg md:text-xl text-gray-700  mb-6 font-medium">
             Get flawless, distraction-free product images. Fast delivery, pixel-perfect edits, and trusted by e-commerce brands worldwide.
           </p>
    

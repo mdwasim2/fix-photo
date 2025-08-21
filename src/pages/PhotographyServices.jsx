@@ -71,7 +71,7 @@ const PhotographyServices = () => (
         <h1 className="text-4xl md:text-5xl font-extrabold text-blue-700 mb-4 drop-shadow">
           Photography Post-Production Services
         </h1>
-        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-6 font-medium">
+        <p className="text-lg md:text-xl text-gray-700  mb-6 font-medium">
           Sharp, sale-ready images for e-commerce, fashion, and product brands. Clean edits, fast turnaround, and expert retouching.
         </p>
 
