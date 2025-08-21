@@ -2,10 +2,10 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import ScrollToTopButton from "./components/custom/ScrollToTopButton";
 import { ThemeProvider } from "./components/custom/theme-provider";
 import Rootlayout from "./layout/Rootlayout";
+import BackgroundRemova from "./pages/BackgroundRemova";
 import Blog from "./pages/Blog";
 import Clippingpath from "./pages/Clipping-path";
 import Contact from "./pages/Contact";
-import Ecommercephotoediting from "./pages/Ecommercephotoediting";
 import Ghostmannequin from "./pages/Ghostmannequin";
 import Highendretouching from "./pages/Highendretouching";
 import Home from "./pages/Home";
@@ -32,8 +32,8 @@ const router = createBrowserRouter([
         Component: ServicePage,
       },
       {
-        path: "/services/ecommerce-photo-editing",
-        Component: Ecommercephotoediting,
+        path: "/services/background-removal",
+        Component: BackgroundRemova,
       },
       {
         path: "/services/clipping-path",
