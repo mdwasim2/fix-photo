@@ -5,6 +5,7 @@ import Rootlayout from "./layout/Rootlayout";
 import BackgroundRemova from "./pages/BackgroundRemova";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Ecommerce_editing from "./pages/Ecommerce_editing";
 import Ghostmannequin from "./pages/Ghostmannequin";
 import Highendretouching from "./pages/Highendretouching";
 import Home from "./pages/Home";
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/services/photography-services",
         Component: PhotographyServices,
+      },
+      {
+        path: "/services/ecommerce-photo-editing",
+        Component: Ecommerce_editing,
       },
       {
         path: "/services/ghost-mannequin",
