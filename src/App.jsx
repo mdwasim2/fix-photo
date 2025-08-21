@@ -15,6 +15,7 @@ import PhotographyServices from "./pages/PhotographyServices";
 import Portfolio from "./pages/Portfolio";
 import Pricing from "./pages/Pricing";
 import ServicePage from "./pages/ServicePage";
+import Weddingphotoediting from "./pages/Wedding-photo-editing";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path: "/services/ecommerce-photo-editing",
         Component: Ecommerce_editing,
+      },
+      {
+        path: "/services/wedding-photo-editing",
+        Component: Weddingphotoediting,
       },
       {
         path: "/services/ghost-mannequin",
