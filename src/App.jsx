@@ -11,7 +11,7 @@ import Ghostmannequin from "./pages/Ghostmannequin";
 import Highendretouching from "./pages/Highendretouching";
 import Home from "./pages/Home";
 import Jewelryediting from "./pages/Jewelryediting";
-import JewelryPhotoEditing from "./pages/JewelryPhotoediting";
+import JewelryPhotoEditing from "./pages/JewelryPhotoEditing";
 import Newbornediting from "./pages/Newbornediting";
 import PhotographyServices from "./pages/PhotographyServices";
 import Portfolio from "./pages/Portfolio";
