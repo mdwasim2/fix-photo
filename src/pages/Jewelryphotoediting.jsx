@@ -1,5 +1,3 @@
-
-
 import Meta from "../helmet/Meta";
 
 const faqs = [
@@ -77,11 +75,11 @@ export default function JewelryPhotoEditing() {
 
         <section className="container mx-auto grid gap-10 px-6 py-16 md:grid-cols-2 md:gap-16">
           <div>
-            <img
+            {/* <img
               src="/images/jewelry-sample.jpg"
               alt="Jewelry Editing Sample"
               className="w-full rounded-lg border shadow"
-            />
+            /> */}
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
