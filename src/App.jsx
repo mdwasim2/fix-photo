@@ -6,10 +6,12 @@ import BackgroundRemova from "./pages/BackgroundRemova";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import Ecommerce_editing from "./pages/Ecommerce_editing";
+import FashionEditing from "./pages/FashionEditing";
 import Ghostmannequin from "./pages/Ghostmannequin";
 import Highendretouching from "./pages/Highendretouching";
 import Home from "./pages/Home";
 import Jewelryediting from "./pages/Jewelryediting";
+import JewelryPhotoEditing from "./pages/JewelryPhotoediting";
 import Newbornediting from "./pages/Newbornediting";
 import PhotographyServices from "./pages/PhotographyServices";
 import Portfolio from "./pages/Portfolio";
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
       {
         path: "/services/wedding-photo-editing",
         Component: Weddingphotoediting,
+      },
+      {
+        path: "/services/fashion-photo-editing",
+        Component: FashionEditing,
+      },
+      {
+        path: "/services/jewelry-photo-editing",
+        Component: JewelryPhotoEditing,
       },
       {
         path: "/services/ghost-mannequin",
