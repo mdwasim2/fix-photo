@@ -12,6 +12,7 @@ import Highendretouching from "./pages/Highendretouching";
 import Home from "./pages/Home";
 import Jewelryediting from "./pages/Jewelryediting";
 // import JewelryPhotoEditing from "./pages/JewelryPhotoEditing";
+import JewelryEditingService from "./pages/JewelryEditingService";
 import Newbornediting from "./pages/Newbornediting";
 import PhotographyServices from "./pages/PhotographyServices";
 import Portfolio from "./pages/Portfolio";
@@ -55,10 +56,10 @@ const router = createBrowserRouter([
         path: "/services/fashion-photo-editing",
         Component: FashionEditing,
       },
-      // {
-      //   path: "/services/jewelry-photo-editing",
-      //   Component: JewelryPhotoEditing,
-      // },
+      {
+        path: "/services/jewelry-photo-editing",
+        Component: JewelryEditingService,
+      },
       {
         path: "/services/ghost-mannequin",
         Component: Ghostmannequin,

@@ -48,7 +48,7 @@ const faqs = [
   },
 ];
 
-export default function JewelryPhotoEditing() {
+export default function JewelryEditingService() {
   return (
     <>
       <Meta
