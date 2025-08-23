@@ -1,6 +1,7 @@
 import AboutTimeline from '../components/custom/AboutTimeline'
 import Banner from '../components/custom/Banner'
 import ExperienceStats from '../components/custom/ExperienceStats'
+import FAQSection from '../components/custom/Faq'
 import Gallery from '../components/custom/Gallery'
 import HowItWorks from '../components/custom/HowItWorks'
 import ReviewSection from '../components/custom/ReviewSection'
@@ -33,6 +34,7 @@ const Home = () => {
        <WorldwideServices/>
        <AboutTimeline/>
        <ReviewSection/>
+       <FAQSection />
 
     </div>
   )
