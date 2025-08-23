@@ -8,7 +8,7 @@ const reviews = [
     rating: 5,
     title: "Basic Photo Retouching Services",
     content:
-      "Once again I've used this amazing photo editing service from Fixthephoto. I've had a couple of images done this weekend by Ann who worked over the weekend to complete my order. Thank again for professional work competitive on price and quality. I'll be sending more images over next weekend. Highly rated 10/10.",
+      "I used Fixthephoto again this weekend and received excellent results. Ann worked over the weekend to complete my images on time. The price was fair, and the quality was great. I’ll be sending more photos next weekend. Highly recommended 10 out of 10.",
   },
   {
     initials: "KB",
@@ -17,7 +17,7 @@ const reviews = [
     rating: 5,
     title: "Advanced Photo Editing Services",
     content:
-      "Once again I've just received my last order, stunning edits, great picture editing service, highly recommended from a very pleased UK customer.",
+      "Just got my latest order back, amazing work! The photos look great. I’ve used this service several times, and it never disappoints. A happy customer from the UK.",
   },
   {
     initials: "MG",
@@ -26,7 +26,7 @@ const reviews = [
     rating: 5,
     title: "Portrait Photo Photoshop Service",
     content:
-      "Just want to say how pleased I am with your work Tani. I initially used you to fix a few problems, but now everything I am printing goes you first. Even photos that I think are good will come back SIGNIFICANTLY better. Thank you for what you do and your Photoshop services!",
+      "Thanks, Tani! I started with a few edits, and now every photo I print goes through you first. Even the good ones come back looking much better. Your work makes a big difference.",
   },
   {
     initials: "JA",
@@ -35,7 +35,7 @@ const reviews = [
     rating: 5,
     title: "Photoshop Services for Headshot Images",
     content:
-      "I just used Fixthephoto for the first time and am EXTREMELY pleased with their editing and their speedy turnaround! I will be using their photo retouching services again. Thanks Fixthephoto!",
+      "This was my first time using Fixthephoto, and I’m very happy with the results. The edits were clean, and the turnaround was fast. I’ll be using this service again. Thank you!",
   },
   {
     initials: "SM",
@@ -44,16 +44,16 @@ const reviews = [
     rating: 5,
     title: "Pro Photo Retouching Services",
     content:
-      "I am a photographer and mother of two. As you can understand, every second is planned in my working day. Recently I collaborated with numerous kinds of photo editing companies, but something was always wrong. Maybe price or turnaround. Now I work with this photo editing service. Full satisfaction.",
+      "As a full-time photographer and busy mom, time matters. I’ve tried many services, but something was always off. Now I use Fixthephoto. No issues with price or delivery time. I’m fully satisfied.",
   },
   {
     initials: "TS",
     name: "Tomos Stuart",
     date: "09/02/2022",
     rating: 5,
-    title: "Photoshop Service for Making Digital Drawing",
+    title: "Photoshop Service for Digital Drawings",
     content:
-      "My dear FixThePhoto, I am eager to express my deep gratitude to you for your quick turnaround and wonderful quality. My clients are satisfied, especially with digital drawings. From my side, I am impressed by low pricing and quick results.",
+      "Thanks, FixThePhoto. Your fast service and good results helped keep my clients happy. I’m especially impressed with the digital drawing edits. Great work at a good price.",
   },
 ];
 
@@ -61,8 +61,8 @@ const ReviewSection = () => {
   return (
     <section className="px-4 py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="max-w-7xl mx-auto text-center mb-10">
-        <h2 className="text-xl sm:text-2xl font-semibold mb-1 ">
-          Fixthephoto Editing Company Feedback
+        <h2 className="text-xl sm:text-2xl font-semibold mb-1">
+          Here’s What People Really Think About FixThePhoto
         </h2>
         <p className=" text-sm mb-4">
           Join thousands of satisfied customers today! Don’t hesitate to leave your personal feedback below.
@@ -82,8 +82,10 @@ const ReviewSection = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {reviews.map((review, index) => (
           <div key={index} className="flex items-start gap-4 text-left">
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center font-bold text-white text-lg"
-                 style={{ backgroundColor: getColor(review.initials) }}>
+            <div
+              className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center font-bold text-white text-lg"
+              style={{ backgroundColor: getColor(review.initials) }}
+            >
               {review.initials}
             </div>
             <div>
@@ -93,7 +95,9 @@ const ReviewSection = () => {
                   {[...Array(review.rating)].map((_, i) => (
                     <Star key={i} size={14} fill="currentColor" />
                   ))}
-                  <span className=" ml-1 text-xs">({review.rating}/5) - {review.date}</span>
+                  <span className=" ml-1 text-xs">
+                    ({review.rating}/5) - {review.date}
+                  </span>
                 </div>
               </div>
               <h5 className="font-medium mt-1 ">{review.title}</h5>
