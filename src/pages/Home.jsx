@@ -4,6 +4,7 @@ import ExperienceStats from '../components/custom/ExperienceStats'
 import FAQSection from '../components/custom/Faq'
 import Gallery from '../components/custom/Gallery'
 import HowItWorks from '../components/custom/HowItWorks'
+import PhotoEditingInfo from '../components/custom/PhotoEditingInfo'
 import ReviewSection from '../components/custom/ReviewSection'
 import Services_main from '../components/custom/Services_main'
 import Testimonial from '../components/custom/Testimonial'
@@ -25,6 +26,7 @@ const Home = () => {
 
        <Banner/>
        <UploadSection/>
+       <PhotoEditingInfo/> 
        <Services_main  />
        <HowItWorks/>
        <VideoBanner/>

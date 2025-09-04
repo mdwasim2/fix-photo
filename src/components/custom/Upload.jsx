@@ -39,13 +39,16 @@ const UploadSection = () => {
     <section className="bg-gray-50 px-4 py-14 text-center dark:bg-gray-900">
       <div className="mx-auto max-w-6xl">
         {/* Heading */}
-        <h2 className="mb-4 text-3xl font-bold leading-snug text-gray-800 dark:text-white md:text-4xl">
+        <h2 className="mb-4 text-3xl leading-snug font-bold text-gray-800 md:text-4xl dark:text-white">
           High Quality Ecommerce Product Photo Editing Services
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-base text-gray-600 dark:text-gray-300">
-        Online shopping starts with great photos. At  ImageFix Lab, we help make your product pictures look clean, sharp, and ready to sell. If you sell on Amazon, Shopify, Etsy, or anywhere else, we can edit your photos to look better and more professional.
-Good product photos help you get more clicks and more sales. We’re here to make that happen fast and easy.
-
+          Online shopping starts with great photos. At ImageFix Lab, we help
+          make your product pictures look clean, sharp, and ready to sell. If
+          you sell on Amazon, Shopify, Etsy, or anywhere else, we can edit your
+          photos to look better and more professional. Good product photos help
+          you get more clicks and more sales. We’re here to make that happen
+          fast and easy.
         </p>
 
         {/* Features Grid */}
@@ -55,7 +58,11 @@ Good product photos help you get more clicks and more sales. We’re here to mak
               key={idx}
               className="flex flex-col items-center text-center text-sm text-gray-700 dark:text-gray-200"
             >
-              <img src={item.icon} alt={item.title} className="mb-3 h-16 w-16" />
+              <img
+                src={item.icon}
+                alt={item.title}
+                className="mb-3 h-16 w-16"
+              />
               <p className="font-medium">{item.title}</p>
             </div>
           ))}
@@ -73,7 +80,7 @@ Good product photos help you get more clicks and more sales. We’re here to mak
 
           <button
             onClick={handleUploadClick}
-            className="relative z-10 mb-4 flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-yellow-400 px-6 py-3 font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-400"
+            className="relative z-10 mb-4 flex items-center gap-2 rounded-full bg-gradient-to-r from-orange-500 to-yellow-400 px-6 py-3 font-semibold text-white shadow-lg transition-transform duration-300 hover:scale-105 focus:ring-2 focus:ring-orange-400 focus:outline-none"
           >
             <Upload className="h-5 w-5" />
             Upload Images
@@ -86,7 +93,7 @@ Good product photos help you get more clicks and more sales. We’re here to mak
         </div>
 
         {/* Text Section */}
-        <div className=" text-center text-gray-700 dark:text-gray-300">
+        <div className="text-center text-gray-700 dark:text-gray-300">
           <h3 className="mb-2 text-2xl font-semibold">
             Photo Editing Services That Sell Your Products Faster
           </h3>
