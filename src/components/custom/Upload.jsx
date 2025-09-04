@@ -43,9 +43,9 @@ const UploadSection = () => {
           High Quality Ecommerce Product Photo Editing Services
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-base text-gray-600 dark:text-gray-300">
-          Imagefixlab has been a trusted name in the e-commerce photo editing
-          industry since 2011. Just upload your photos, let us know your
-          criteria, and consider your work done.
+        Online shopping starts with great photos. At  ImageFix Lab, we help make your product pictures look clean, sharp, and ready to sell. If you sell on Amazon, Shopify, Etsy, or anywhere else, we can edit your photos to look better and more professional.
+Good product photos help you get more clicks and more sales. We’re here to make that happen fast and easy.
+
         </p>
 
         {/* Features Grid */}
