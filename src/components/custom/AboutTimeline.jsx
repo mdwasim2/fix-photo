@@ -19,9 +19,34 @@ const AboutTimeline = () => {
       {/* Header */}
       <div className="text-center mb-14">
         <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-2">
-          About Image Fix Lab Photo Retouching Service
+          About Fix The Photo 
         </h2>
-        <p className="text-base">Image Retouching Company Growth Over the Years</p>
+      </div>
+
+      {/* Added Intro Section */}
+      <div className="space-y-5 mb-10 text-base leading-relaxed max-w-4xl mx-auto">
+        <p>
+          If you have a photo and it needs fixing, there’s a good chance we can handle it.
+        </p>
+        <h3 className="text-xl font-semibold mt-4">How It All Grew</h3>
+        <p>
+          At first, we focused on one thing: portrait editing. That was in 2016. Over the next few years, we started offering other services. By 2018, we were working on old photo restoration. In 2020, we added Lightroom editing. In 2021, we got into product and fashion work. More options followed.
+          In 2025, we even made our own photo editing app. One step at a time, we built a service people could count on.
+        </p>
+        <h3 className="text-xl font-semibold mt-4">What Makes Us Different</h3>
+        <p>
+          You’re not just sending your photos into a system. Real people work on every picture. We look at your request, fix what you ask for, and check the details. If you want something changed, you can ask. We’ll listen.
+          Also, your photos are private. We don’t share them. We don’t post them. They stay between you and us.
+        </p>
+        <h3 className="text-xl font-semibold mt-4">No Tricks, No Pressure</h3>
+        <p>
+          We don’t lock you into anything. If you have one photo, send one. If you have 500, we can do that too. We keep our pricing clear, and there are no hidden fees. Not sure yet? You can ask for a free sample before placing an order.
+        </p>
+        <h3 className="text-xl font-semibold mt-4">Our Promise</h3>
+        <p>
+          We don’t try to be something we’re not. We don’t use big words to sound smart. We fix photos. That’s it. You take the pictures. We clean them up. You get more time to do what you care about.
+          Some people use our service once. Others send work every week. Either way, we treat each photo like it matters because it does.
+        </p>
       </div>
 
       {/* Story / About */}

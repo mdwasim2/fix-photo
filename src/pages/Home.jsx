@@ -4,12 +4,14 @@ import ExperienceStats from '../components/custom/ExperienceStats'
 import FAQSection from '../components/custom/Faq'
 import Gallery from '../components/custom/Gallery'
 import HowItWorks from '../components/custom/HowItWorks'
+import LatestNewsBlog from '../components/custom/LatestNewsBlog'
 import PhotoEditingInfo from '../components/custom/PhotoEditingInfo'
 import ReviewSection from '../components/custom/ReviewSection'
 import Services_main from '../components/custom/Services_main'
 import Testimonial from '../components/custom/Testimonial'
 import UploadSection from '../components/custom/Upload'
 import VideoBanner from '../components/custom/VideoBanner'
+import WhyChooseImageFixLab from '../components/custom/WhyChooseImageFixLab'
 import WorldwideServices from '../components/custom/WorldwideServices'
 import Meta from '../helmet/Meta'
 
@@ -35,6 +37,8 @@ const Home = () => {
        <Gallery/>
        <WorldwideServices/>
        <AboutTimeline/>
+       <WhyChooseImageFixLab/>
+        <LatestNewsBlog/>
        <ReviewSection/>
        <FAQSection />
 
